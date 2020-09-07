@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Complete Website Design Using HTML and CSS Responsive</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+   
+    <script src= "https://smtpjs.com/v3/smtp.js"></script> 
+  
+ <script src= "js/index.js"></script> 
+</head>
+<body>
+    <!-- Header section -->
+
+    <section id="header">
+        <div class="container">
+            <img src="images/logo.png" class="logo">
+            <div class="header-text">
+                <h1>By donating a coffee,<br>you can change someone's life.</h1>
+                <span class="circle"></span>
+                <p>
+                    We transform each coffee donation into hot drinks during the fall and winter and cold drinks during the spring and summer. We also give food to those who need it. With your coffee donation you help us reach many more.Help us build a better world with a simple gesture: donating your virtual coffee.
+                </p>
+                <button onClick="document.getElementById('about').scrollIntoView({ behavior: 'smooth', block: 'center' });" class="common-btn">Read More</button>
+                <div class="line">
+                    <span class="line-1"></span><br>
+                    <span class="line-2"></span><br>
+                    <span class="line-3"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!--Side Nav Menu -->
+
+    <nav id="sideNav">
+       <!-- ul>li*5>a -->
+        <ul>
+            <li><a href="#header">HOME</a></li>
+            <li><a href="#about">ABOUT US</a></li>
+            <li><a href="#works">OUR WORK</a></li>
+            <li><a href="#donate">DONATE</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+        </ul>
+    </nav>
+    <img src="images/menu.png" id="menuBtn">
+
+    <!-- about section -->
+
+    <section id="about">
+        <div class="about-left-col">
+            <img src="images/about.png" alt="about">
+        </div>
+        <div class="about-right-col">
+            <div class="about-text">
+                <h1>About Us</h1>
+                <span class="circle"></span>
+                <p>
+                    Kfee is a cafeteria venture that emerged to support homeless people. We bring you hot drinks during the fall and winter and cold drinks during the spring and summer. We also transform the proceeds into food. Every coffee you donate becomes direct help.
+                    Help us build a better world with a simple gesture: donating your virtual coffee.
+                </p><br><br>
+                <div class="line">
+                    <span class="line-1"></span><br>
+                    <span class="line-2"></span><br>
+                    <span class="line-3"></span>
+                </div>
+                <h2>
+                    We make a living by what we get, but we make a life by what we give.
+                </h2>
+                <h3>
+                    ----Winston Churchill 
+                </h3>
+            </div>
+        </div>
+    </section>
+
+    <!--Our Work section-->
+    <section id="works">
+        <div class="work-row">
+            <div class="work-col">
+                <img src="images/pic-1.png" alt="Featuring Number 1">
+                <h4>Donations</h4>
+                <p>You allow us to made 1500 hot drink and 600 cold drink + food with the donations</p>
+
+            </div>
+            <div class="work-col">
+                <img src="images/pic-2.png" alt="Featuring Number 2">
+                <h4>Partnership</h4>
+                <p>We made a partnership with several coffee shops from different parts of the world because we need to distribute these drinks with the money you donate.</p>
+            </div>
+            <div class="work-col">
+                <img src="images/pic-3.png" alt="Featuring Number 3">
+                <h4>Transport Alliances</h4>
+                <p>Thanks to you we made transport alliances to be able to reach all the places where it is needed.</p>
+            </div>
+        </div>
+        <div class="work-btn">
+                <div class="line">
+                    <span class="line-1"></span><br>
+                    <span class="line-2"></span><br>
+                    <span class="line-3"></span>
+                </div>
+                <button onClick="document.getElementById('donate').scrollIntoView({ behavior: 'smooth', block: 'center' });" class="common-btn">Donate a Coffee</button>
+        </div>
+    </section>
+
+   
+     <!-- donate section -->
+
+     <section id="donate">
+        <div class="donate-left-col">
+            <img src="images/donate.png" alt="donate">
+        </div>
+        <div class="donate-right-col">
+            <div class="donate-text">
+                <h1>Donate<br> and be part of this cause</h1>
+                <span class="circle"></span>
+                <p>
+                    With your help of the donation of 25 argentine pesos today, with is less than what a regular coffee costs and less than a dolar, it allows us to distribute 1 liter of coffee, tea, mate or chocolate; either hot or cold, per day. Help us to continue helping.
+                </p><br><br>
+                <div class="line">
+                    <span class="line-1"></span><br>
+                    <span class="line-2"></span><br>
+                    <span class="line-3"></span>
+                </div>
+                <button class="common-btn">Donate a Coffee</button>
+            </div>
+        </div>
+    </section>
+
+      <!-- contact section -->
+   
+    <section id="contact">
+        <div class="container contact-row">
+            <div class="contact-left-col">
+                <h1>Contact us if you have <br>any question</h1>
+                <span class="circle"></span>
+                <form method="post">
+                    <input type="text" name="name" id="name" placeholder="Enter Name">
+                    <input type="email" name="email" id="email" placeholder="Enter Email">
+                    <input type="textarea" name="textarea" id="textarea" rows="4" cols="50" placeholder="Write something to us">
+                    <div class="btn-box">
+                        <input type="button" class="common-btn" value="Send Email" onclick="sendEmail()" />
+                    </div>
+                </form>
+                <div class="line">
+                    <span class="line-1"></span><br>
+                    <span class="line-2"></span><br>
+                    <span class="line-3"></span>
+                </div>
+            </div>
+            <div class="contact-right-col">
+                <img src="images/contact.png" alt="Contact">
+            </div>
+        </div>
+    </section>
+
+    <section id="footer">
+        <div class="container footer-row">
+            <hr>
+            <div class="footer-left-col">
+                <div class="footer-links">
+                    <div class="link-title">
+                        <h4>Homepage</h4>
+                        <a href="#header"><small>Hello</small></a>
+                    </div>
+                    <div class="link-title">
+                        <h4>About Us</h4>
+                        <a href="#about"><small>The cause</small></a>
+                    </div>
+                    <div class="link-title">
+                        <h4>Our Work</h4>
+                        <a href="#works"><small>Donations</small></a>
+                    </div>
+                    <div class="link-title">
+                        <h4>Donate</h4>
+                        <a href="#donate"><small>Donate to Us</small></a><br>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-right-col">
+                <div class="footer-info">
+                    <div class="copyright-text">
+                        <a href="mailto:kfee.support@yopmail.com?body=Contact from the site of kfee"><small>kfee.support@yopmail.com</small></a><br>
+                        <small>Copyright 2020 Kfee</small>
+                    </div>
+                    <div class="footer-logo">
+                        <img src="images/logo.png" alt="KFee">
+                        <input type="button" class="common-btn" value="Spanish" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- social-icon -->
+    <div class="social-icons">
+        <a href="http://www.facebook.com/" target="_blank"><img src="images/facebook.png" alt="Facebook"></a>
+        <a href="http://www.intagram.com/" target="_blank"><img src="images/instagram.png" alt="Intagram"></a>
+        <a href="http://www.twitter.com/" target="_blank"><img src="images/twitter.png" alt="Twitter"></a>
+        <a href="http://www.linkedin.com/" target="_blank"><img src="images/linkedin.png" alt="Linkedin"></a>
+    </div>
+
+    <!-- Nav Animations -->
+
+    <script>
+        var menuBtn = document.getElementById("menuBtn");
+        var sideNav = document.getElementById("sideNav");
+        sideNav.style.right = "-250px";
+        menuBtn.onclick = function(){
+            if(sideNav.style.right == "-250px"){
+                sideNav.style.right = "0";
+            } else {
+                sideNav.style.right = "-250px";
+            }
+        }
+
+        var scroll = new SmoothScroll('a[href*="#"]', {
+            speed: 1000,
+            speedAsDuration: true
+});
+</script>
+</body>
+</html>

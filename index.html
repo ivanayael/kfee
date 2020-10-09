@@ -137,13 +137,16 @@
             <div class="contact-left-col">
                 <h1>Contact us if you have <br>any question</h1>
                 <span class="circle"></span>
-                <form method="post">
+                <form method="post" id="contactform" >
                     <input type="text" name="name" id="name" placeholder="Enter Name">
-                    <input type="email" name="email" id="email" placeholder="Enter Email">
+                    <input type="email" name="_replyto" id="email" placeholder="Enter Email">
                     <input type="textarea" name="textarea" id="textarea" rows="4" cols="50" placeholder="Write something to us">
                     <div class="btn-box">
-                        <input type="button" class="common-btn" value="Send Email" onclick="sendEmail()" />
+                        <input type="submit" class="common-btn" value="Send Email"  />
                     </div>
+                    <input type="hidden" name="_next" value="gracias.html" />
+                    <input type="hidden" name="_subject" value="Contacto de mi sitio" />
+                    <input type="text" name="_gotcha" style="display:none" />
                 </form>
                 <div class="line">
                     <span class="line-1"></span><br>
@@ -155,6 +158,7 @@
                 <img src="images/contact.png" alt="Contact">
             </div>
         </div>
+        
     </section>
 
     <section id="footer">
@@ -207,6 +211,9 @@
     <!-- Nav Animations -->
 
     <script>
+        var contactform =  document.getElementById('contactform');
+        contactform.setAttribute('action', 'https://formspree.io/' + 'ivanayael' + '@' + 'hotmail' + '.' + 'com'); 
+        
         var menuBtn = document.getElementById("menuBtn");
         var sideNav = document.getElementById("sideNav");
         sideNav.style.right = "-250px";

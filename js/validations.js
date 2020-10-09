@@ -12,7 +12,7 @@ function OKValidations()
         return false; 
     } 
        
-    if (email.value == null || email.value == "" || (email.charAt(email.length-4)!='.') && (email.charAt(email.length-3)!='.'))                                   
+    if (email.value == null || email.value == "")                                   
     { 
         window.alert("Please enter a valid e-mail address.");
         email.style.backgroundColor = "#FF0000"; 

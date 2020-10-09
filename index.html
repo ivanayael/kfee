@@ -1,15 +1,13 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Complete Website Design Using HTML and CSS Responsive</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
-   
-    <script src= "https://smtpjs.com/v3/smtp.js"></script> 
-  
- <script src= "js/index.js"></script> 
+    <script src= "./js/validations.js" type="application/javascript" ></script> 
+
 </head>
 <body>
     <!-- Header section -->
@@ -18,12 +16,12 @@
         <div class="container">
             <img src="images/logo.png" class="logo">
             <div class="header-text">
-                <h1>By donating a coffee,<br>you can change someone's life.</h1>
+                <h1 class="htitle">By donating a coffee,<br>you can change someone's life.</h1>
                 <span class="circle"></span>
-                <p>
+                <p class="hdescription">
                     We transform each coffee donation into hot drinks during the fall and winter and cold drinks during the spring and summer. We also give food to those who need it. With your coffee donation you help us reach many more.Help us build a better world with a simple gesture: donating your virtual coffee.
                 </p>
-                <button onClick="document.getElementById('about').scrollIntoView({ behavior: 'smooth', block: 'center' });" class="common-btn">Read More</button>
+                <button onClick="document.getElementById('about').scrollIntoView({ behavior: 'smooth', block: 'center' });" class="common-btn hreadmore">Read More</button>
                 <div class="line">
                     <span class="line-1"></span><br>
                     <span class="line-2"></span><br>
@@ -38,11 +36,11 @@
     <nav id="sideNav">
        <!-- ul>li*5>a -->
         <ul>
-            <li><a href="#header">HOME</a></li>
-            <li><a href="#about">ABOUT US</a></li>
-            <li><a href="#works">OUR WORK</a></li>
-            <li><a href="#donate">DONATE</a></li>
-            <li><a href="#contact">CONTACT</a></li>
+            <li><a href="#header" class="bhome">HOME</a></li>
+            <li><a href="#about" class="babout">ABOUT US</a></li>
+            <li><a href="#works" class="bwork">OUR WORK</a></li>
+            <li><a href="#donate" class="bdonate">DONATE</a></li>
+            <li><a href="#contact" class="bcontact">CONTACT</a></li>
         </ul>
     </nav>
     <img src="images/menu.png" id="menuBtn">
@@ -55,9 +53,9 @@
         </div>
         <div class="about-right-col">
             <div class="about-text">
-                <h1>About Us</h1>
+                <h1 class="atitle">About Us</h1>
                 <span class="circle"></span>
-                <p>
+                <p class="adescription">
                     Kfee is a cafeteria venture that emerged to support homeless people. We bring you hot drinks during the fall and winter and cold drinks during the spring and summer. We also transform the proceeds into food. Every coffee you donate becomes direct help.
                     Help us build a better world with a simple gesture: donating your virtual coffee.
                 </p><br><br>
@@ -66,7 +64,7 @@
                     <span class="line-2"></span><br>
                     <span class="line-3"></span>
                 </div>
-                <h2>
+                <h2 class="aphrase">
                     We make a living by what we get, but we make a life by what we give.
                 </h2>
                 <h3>
@@ -81,8 +79,8 @@
         <div class="work-row">
             <div class="work-col">
                 <img src="images/pic-1.png" alt="Featuring Number 1">
-                <h4>Donations</h4>
-                <p>You allow us to made 1500 hot drink and 600 cold drink + food with the donations</p>
+                <h4 class="dtitle">Donations</h4>
+                <p class="ddescription">You allow us to made 1500 hot drink and 600 cold drink + food with the donations</p>
 
             </div>
             <div class="work-col">
@@ -137,7 +135,7 @@
             <div class="contact-left-col">
                 <h1>Contact us if you have <br>any question</h1>
                 <span class="circle"></span>
-                <form method="post" id="contactform" >
+                <form method="POST" name="contactform" id="contactform"  onsubmit="return OKValidations()" >
                     <input type="text" name="name" id="name" placeholder="Enter Name">
                     <input type="email" name="_replyto" id="email" placeholder="Enter Email">
                     <input type="textarea" name="textarea" id="textarea" rows="4" cols="50" placeholder="Write something to us">
@@ -145,7 +143,7 @@
                         <input type="submit" class="common-btn" value="Send Email"  />
                     </div>
                     <input type="hidden" name="_next" value="gracias.html" />
-                    <input type="hidden" name="_subject" value="Contacto de mi sitio" />
+                    <input type="hidden" name="_subject" value="Contacto desde el sitio" />
                     <input type="text" name="_gotcha" style="display:none" />
                 </form>
                 <div class="line">
@@ -193,7 +191,10 @@
                     </div>
                     <div class="footer-logo">
                         <img src="images/logo.png" alt="KFee">
-                        <input type="button" class="common-btn" value="Spanish" />
+                        <div class="langWrap">
+                            <a href="#" language='english' class="active">English</a>
+                            <a href="#" language='spanish' >Spanish</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -211,8 +212,44 @@
     <!-- Nav Animations -->
 
     <script>
+        const langEl = document.querySelector('.langWrap');
+		const link = document.querySelectorAll('a');
+		const titleEl = document.querySelector('.htitle');
+		const descrEl = document.querySelector('.hdescription');
+        const botonEl = document.querySelector('button.hreadmore');
+
+		link.forEach(el => {
+			el.addEventListener('click', () => {
+				langEl.querySelector('.active').classList.remove('active');
+				el.classList.add('active');
+
+				const attr = el.getAttribute('language');
+
+				titleEl.textContent = data[attr].htitle;
+				descrEl.textContent = data[attr].hdescription;
+                botonEl.textContent = data[attr].hreadmore;
+			});
+        });
+
+
+        var data = {
+			  "english": 
+			  {
+			    "htitle": "By donating a coffee,\nyou can change someone's life.",
+			    "hdescription": 
+				    "We transform each coffee donation into hot drinks during the fall and winter and cold drinks during the spring and summer. We also give food to those who need it. With your coffee donation you help us reach many more.Help us build a better world with a simple gesture: donating your virtual coffee.",
+                    "hreadmore": "Ver mas."
+              },
+              "spanish":
+			  {
+                "htitle": "Donando un café,\npuedes cambiarle la vida de alguien.",
+                "hdescription": "Transformamos cada donación de café en bebidas calientes durante el otoño e invierno y bebidas frías durante la primavera y el verano. También damos comida a quienes la necesitan. Con tu donación de café nos ayudas a llegar a muchos más Ayúdanos a construir un mundo mejor con un simple gesto: donando tu café virtual.",
+                "hreadmore": "Ver mas."
+              },
+			}
+        
         var contactform =  document.getElementById('contactform');
-        contactform.setAttribute('action', 'https://formspree.io/' + 'ivanayael' + '@' + 'hotmail' + '.' + 'com'); 
+        contactform.setAttribute('action', 'https://formspree.io/' + 'xjvpvlgr'); 
         
         var menuBtn = document.getElementById("menuBtn");
         var sideNav = document.getElementById("sideNav");

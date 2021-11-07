@@ -136,9 +136,9 @@
                 <h1 class="contactus">Contact us if you have <br>any question</h1>
                 <span class="circle"></span>
                 <form method="POST" name="contactform" id="contactform"  onsubmit="return OKValidations()" >
-                    <input type="text" name="name" id="name" placeholder="Enter Name">
-                    <input type="email" name="_replyto" id="email" placeholder="Enter Email">
-                    <input type="textarea" name="textarea" id="textarea" rows="4" cols="50" placeholder="Write something to us">
+                    <input type="text" name="name" id="name" placeholder="Enter Name / Ingresa Nombre">
+                    <input type="email" name="_replyto" id="email" placeholder="Enter Email / Ingresa Email">
+                    <input type="textarea" name="textarea" id="textarea" rows="4" cols="50" placeholder="Write something to us / Escribenos algo">
                     <div class="btn-box">
                         <button type="submit" class="common-btn sendmymail" value="Send Email">Send Email</button>
                     </div>
@@ -165,20 +165,20 @@
             <div class="footer-left-col">
                 <div class="footer-links">
                     <div class="link-title">
-                        <h4>Homepage</h4>
-                        <a href="#header" class="bhome"><small>Hello</small></a>
+                        <h4 class="hhomes">Homepage</h4>
+                        <a href="#header" class="bhomes"><small>Hello</small></a>
                     </div>
                     <div class="link-title">
-                        <h4>About Us</h4>
-                        <a href="#about" class="babout"><small>The cause</small></a>
+                        <h4 class="habouts">About Us</h4>
+                        <a href="#about" class="babouts"><small>The cause</small></a>
                     </div>
                     <div class="link-title">
-                        <h4>Our Work</h4>
-                        <a href="#works" class="bwork"><small>Donations</small></a>
+                        <h4 class="hworks">Our Work</h4>
+                        <a href="#works" class="bworks"><small>Donations</small></a>
                     </div>
                     <div class="link-title">
-                        <h4>Donate</h4>
-                        <a href="#donate" class="bdonate"><small>Donate to Us</small></a><br>
+                        <h4 class="hdonates">Donate</h4>
+                        <a href="#donate" class="bdonates"><small>Donate to Us</small></a><br>
                     </div>
                 </div>
             </div>
@@ -243,6 +243,18 @@
         const contactusEl = document.querySelector('.contactus');
         const botonsendmymailEl = document.querySelector('button.sendmymail');
 
+        const linkbhomesEl = document.querySelector('a.bhomes');
+        const linkbaboutsEl = document.querySelector('a.babouts');
+        const linkbworksEl = document.querySelector('a.bworks');
+        const linkbdonatesEl = document.querySelector('a.bdonates');
+       
+
+        const hhomesEl = document.querySelector('.hhomes');
+        const haboutsEl = document.querySelector('.habouts');
+        const hworksEl = document.querySelector('.hworks');
+        const hdonatesEl = document.querySelector('.hdonates');
+       
+
 		link.forEach(el => {
 			el.addEventListener('click', () => {
 				langEl.querySelector('.active').classList.remove('active');
@@ -280,6 +292,18 @@
 
                 botonsendmymailEl.textContent = data[attr].sendmymail;
 
+                linkbhomesEl.textContent = data[attr].bhomes;
+                linkbaboutsEl.textContent = data[attr].babouts;
+                linkbworksEl.textContent = data[attr].bworks;
+                linkbdonatesEl.textContent = data[attr].bdonates;
+              
+
+                hhomesEl.textContent = data[attr].hhomes;
+                haboutsEl.textContent = data[attr].habouts;
+                hworksEl.textContent = data[attr].hworks;
+                hdonatesEl.textContent = data[attr].hdonates;
+             
+
 			});
         });
 
@@ -307,7 +331,16 @@
                 "dtitlecause":"Donate\n and be part of this cause",
                 "ddescriptioncause":"With your help of the donation of 50 argentine pesos today, with is less than what a regular coffee costs and less than a dolar, it allows us to distribute 1 liter of coffee, tea, mate or chocolate; either hot or cold, per day. Help us to continue helping.",
                 "contactus":"Contact us if you have \nany question",
-                "sendmymail":"Send Email"
+                "sendmymail":"Send Email",
+                "hhomes":"Homepage",
+                "habouts":"About Us",
+                "hworks":"Our Work",
+                "hdonates":"Donate",
+                "bhomes":"Hello",
+                "babouts":"The cause",
+                "bworks":"Donations",
+                "bdonates":"Donate to us"
+             
 
               },
               "spanish":
@@ -332,7 +365,15 @@
                 "dtitlecause":"Dona\n y se parte de esta causa",
                 "ddescriptioncause":"Con tu ayuda de la donación de 50 pesos argentinos hoy, con es menos de lo que cuesta un café normal y menos de un dolar, nos permite distribuir 1 litro de café, té, mate o chocolate; ya sea caliente o frío, por día. Ayudanos a seguir ayudando.",
                 "contactus":"Contactate con nosotros si tienes \nalguna pregunta",
-                "sendmymail":"Enviar Email"
+                "sendmymail":"Enviar Email",
+                "hhomes":"Inicio",
+                "habouts":"Sobre Nosotros",
+                "hworks":"Nuestro Trabajo",
+                "hdonates":"Dona",
+                "bhomes":"Hola",
+                "babouts":"La causa",
+                "bworks":"Donaciones",
+                "bdonates":"Donanos"
               },
 			}
         

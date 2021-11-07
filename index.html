@@ -123,7 +123,9 @@
                     <span class="line-2"></span><br>
                     <span class="line-3"></span>
                 </div>
-                <button class="common-btn">Donate a Coffee</button>
+               <button class="common-btn"> 
+            <a href='https://cafecito.app/iyc' rel='noopener' target='_blank' class="DonateCoffe">Donate a Coffe</a>
+               </button> 
             </div>
         </div>
     </section>
@@ -254,6 +256,7 @@
         const hworksEl = document.querySelector('.hworks');
         const hdonatesEl = document.querySelector('.hdonates');
        
+        const DonateCoffe = document.querySelector('a.DonateCoffe');
 
 		link.forEach(el => {
 			el.addEventListener('click', () => {
@@ -303,7 +306,7 @@
                 hworksEl.textContent = data[attr].hworks;
                 hdonatesEl.textContent = data[attr].hdonates;
              
-
+                DonateCoffe.textContent = data[attr].DonateCoffe;
 			});
         });
 
@@ -339,9 +342,8 @@
                 "bhomes":"Hello",
                 "babouts":"The cause",
                 "bworks":"Donations",
-                "bdonates":"Donate to us"
-             
-
+                "bdonates":"Donate to us",
+                "DonateCoffe":"Donate a Coffe"
               },
               "spanish":
 			  {
@@ -373,7 +375,8 @@
                 "bhomes":"Hola",
                 "babouts":"La causa",
                 "bworks":"Donaciones",
-                "bdonates":"Donanos"
+                "bdonates":"Donanos",
+                "DonateCoffe":"Doná un café"
               },
 			}
         

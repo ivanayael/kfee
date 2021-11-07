@@ -79,19 +79,19 @@
         <div class="work-row">
             <div class="work-col">
                 <img src="images/pic-1.png" alt="Featuring Number 1">
-                <h4 class="dtitle">Donations</h4>
-                <p class="ddescription">You allow us to made 1500 hot drink and 600 cold drink + food with the donations</p>
+                <h4 class="wdonationstitle">Donations</h4>
+                <p class="wdescription">You allow us to made 1500 hot drink and 600 cold drink + food with the donations</p>
 
             </div>
             <div class="work-col">
                 <img src="images/pic-2.png" alt="Featuring Number 2">
-                <h4>Partnership</h4>
-                <p>We made a partnership with several coffee shops from different parts of the world because we need to distribute these drinks with the money you donate.</p>
+                <h4 class="wpartnershiptitle">Partnership</h4>
+                <p class="wpartnership">We made a partnership with several coffee shops from different parts of the world because we need to distribute these drinks with the money you donate.</p>
             </div>
             <div class="work-col">
                 <img src="images/pic-3.png" alt="Featuring Number 3">
-                <h4>Transport Alliances</h4>
-                <p>Thanks to you we made transport alliances to be able to reach all the places where it is needed.</p>
+                <h4 class="wtransporttitle">Transport Alliances</h4>
+                <p class="wtransport">Thanks to you we made transport alliances to be able to reach all the places where it is needed.</p>
             </div>
         </div>
         <div class="work-btn">
@@ -113,10 +113,10 @@
         </div>
         <div class="donate-right-col">
             <div class="donate-text">
-                <h1>Donate<br> and be part of this cause</h1>
+                <h1 class="dtitlecause">Donate<br> and be part of this cause</h1>
                 <span class="circle"></span>
-                <p>
-                    With your help of the donation of 25 argentine pesos today, with is less than what a regular coffee costs and less than a dolar, it allows us to distribute 1 liter of coffee, tea, mate or chocolate; either hot or cold, per day. Help us to continue helping.
+                <p class="ddescriptioncause">
+                    With your help of the donation of 50 argentine pesos today, with is less than what a regular coffee costs and less than a dolar, it allows us to distribute 1 liter of coffee, tea, mate or chocolate; either hot or cold, per day. Help us to continue helping.
                 </p><br><br>
                 <div class="line">
                     <span class="line-1"></span><br>
@@ -133,14 +133,14 @@
     <section id="contact">
         <div class="container contact-row">
             <div class="contact-left-col">
-                <h1>Contact us if you have <br>any question</h1>
+                <h1 class="contactus">Contact us if you have <br>any question</h1>
                 <span class="circle"></span>
                 <form method="POST" name="contactform" id="contactform"  onsubmit="return OKValidations()" >
                     <input type="text" name="name" id="name" placeholder="Enter Name">
                     <input type="email" name="_replyto" id="email" placeholder="Enter Email">
                     <input type="textarea" name="textarea" id="textarea" rows="4" cols="50" placeholder="Write something to us">
                     <div class="btn-box">
-                        <input type="submit" class="common-btn" value="Send Email"  />
+                        <button type="submit" class="common-btn sendmymail" value="Send Email">Send Email</button>
                     </div>
                     <input type="hidden" name="_next" value="gracias.html" />
                     <input type="hidden" name="_subject" value="Contacto desde el sitio" />
@@ -166,19 +166,19 @@
                 <div class="footer-links">
                     <div class="link-title">
                         <h4>Homepage</h4>
-                        <a href="#header"><small>Hello</small></a>
+                        <a href="#header" class="bhome"><small>Hello</small></a>
                     </div>
                     <div class="link-title">
                         <h4>About Us</h4>
-                        <a href="#about"><small>The cause</small></a>
+                        <a href="#about" class="babout"><small>The cause</small></a>
                     </div>
                     <div class="link-title">
                         <h4>Our Work</h4>
-                        <a href="#works"><small>Donations</small></a>
+                        <a href="#works" class="bwork"><small>Donations</small></a>
                     </div>
                     <div class="link-title">
                         <h4>Donate</h4>
-                        <a href="#donate"><small>Donate to Us</small></a><br>
+                        <a href="#donate" class="bdonate"><small>Donate to Us</small></a><br>
                     </div>
                 </div>
             </div>
@@ -187,13 +187,13 @@
                 <div class="footer-info">
                     <div class="copyright-text">
                         <a href="mailto:kfee.support@yopmail.com?body=Contact from the site of kfee"><small>kfee.support@yopmail.com</small></a><br>
-                        <small>Copyright 2020 Kfee</small>
+                        <small>Copyright 2021 Kfee</small>
                     </div>
                     <div class="footer-logo">
                         <img src="images/logo.png" alt="KFee">
                         <div class="langWrap">
                             <a href="#" language='english' class="active">English</a>
-                            <a href="#" language='spanish' >Spanish</a>
+                            <a href="#" language='spanish' >Español</a>
                         </div>
                     </div>
                 </div>
@@ -218,6 +218,31 @@
 		const descrEl = document.querySelector('.hdescription');
         const botonEl = document.querySelector('button.hreadmore');
 
+        const linkbhomeEl = document.querySelector('a.bhome');
+        const linkbaboutEl = document.querySelector('a.babout');
+        const linkbworkEl = document.querySelector('a.bwork');
+        const linkbdonateEl = document.querySelector('a.bdonate');
+        const linkbcontactEl = document.querySelector('a.bcontact');
+
+        const titleAboutUsEl = document.querySelector('.atitle');
+        const adescrEl = document.querySelector('.adescription');
+        const aphraseEl = document.querySelector('.aphrase');
+
+        const wdonationstitleEl = document.querySelector('.wdonationstitle');
+		const wdonationsdescrEl = document.querySelector('.wdescription');
+       
+        const wpartnershiptitleEl = document.querySelector('.wpartnershiptitle');
+		const wpartnershipdescrEl = document.querySelector('.wpartnership');
+
+        const wtransporttitleEl = document.querySelector('.wtransporttitle');
+		const wtransportpdescrEl = document.querySelector('.wtransport');
+
+        const dtitlecauseEl = document.querySelector('.dtitlecause');
+		const ddescriptioncausedescrEl = document.querySelector('.ddescriptioncause');
+
+        const contactusEl = document.querySelector('.contactus');
+        const botonsendmymailEl = document.querySelector('button.sendmymail');
+
 		link.forEach(el => {
 			el.addEventListener('click', () => {
 				langEl.querySelector('.active').classList.remove('active');
@@ -228,6 +253,33 @@
 				titleEl.textContent = data[attr].htitle;
 				descrEl.textContent = data[attr].hdescription;
                 botonEl.textContent = data[attr].hreadmore;
+
+                linkbhomeEl.textContent = data[attr].bhome;
+                linkbaboutEl.textContent = data[attr].babout;
+                linkbworkEl.textContent = data[attr].bwork;
+                linkbdonateEl.textContent = data[attr].bdonate;
+                linkbcontactEl.textContent = data[attr].bcontact;
+
+                titleAboutUsEl.textContent = data[attr].atitle;
+                adescrEl.textContent = data[attr].adescription;
+                aphraseEl.textContent = data[attr].aphrase;
+
+                wdonationstitleEl.textContent = data[attr].wdonationstitle;
+		        wdonationsdescrEl.textContent = data[attr].wdescription;
+       
+                wpartnershiptitleEl.textContent = data[attr].wpartnershiptitle;
+		        wpartnershipdescrEl.textContent = data[attr].wpartnership;
+
+                wtransporttitleEl.textContent =  data[attr].wtransporttitle;
+		        wtransportpdescrEl.textContent = data[attr].wtransport;
+
+                dtitlecauseEl.textContent = data[attr].dtitlecause;
+		        ddescriptioncausedescrEl.textContent = data[attr].ddescriptioncause;
+
+                contactusEl.textContent = data[attr].contactus;
+
+                botonsendmymailEl.textContent = data[attr].sendmymail;
+
 			});
         });
 
@@ -237,18 +289,55 @@
 			  {
 			    "htitle": "By donating a coffee,\nyou can change someone's life.",
 			    "hdescription": "We transform each coffee donation into hot drinks during the fall and winter and cold drinks during the spring and summer. We also give food to those who need it. With your coffee donation you help us reach many more.Help us build a better world with a simple gesture: donating your virtual coffee.",
-                "hreadmore": "Read more"
+                "hreadmore": "Read more",
+                "bhome":"HOME",
+                "babout":"ABOUT US",
+                "bwork":"OUR WORK",
+                "bdonate":"DONATE",
+                "bcontact":"CONTACT",
+                "atitle":"About Us",
+                "adescription":"Kfee is a cafeteria venture that emerged to support homeless people. We bring you hot drinks during the fall and winter and cold drinks during the spring and summer. We also transform the proceeds into food. Every coffee you donate becomes direct help.Help us build a better world with a simple gesture: donating your virtual coffee.",
+                "aphrase":"We make a living by what we get, but we make a life by what we give.",
+                "wdonationstitle":"Donations",
+                "wdescription":"You allow us to made 1500 hot drink and 600 cold drink + food with the donations",
+                "wpartnershiptitle":"Partnership",
+                "wpartnership":"We made a partnership with several coffee shops from different parts of the world because we need to distribute these drinks with the money you donate.",
+                "wtransporttitle":"Transport Alliances",
+                "wtransport":"Thanks to you we made transport alliances to be able to reach all the places where it is needed.",
+                "dtitlecause":"Donate\n and be part of this cause",
+                "ddescriptioncause":"With your help of the donation of 50 argentine pesos today, with is less than what a regular coffee costs and less than a dolar, it allows us to distribute 1 liter of coffee, tea, mate or chocolate; either hot or cold, per day. Help us to continue helping.",
+                "contactus":"Contact us if you have \nany question",
+                "sendmymail":"Send Email"
+
               },
               "spanish":
 			  {
                 "htitle": "Donando un café,\npuedes cambiarle la vida de alguien.",
                 "hdescription": "Transformamos cada donación de café en bebidas calientes durante el otoño e invierno y bebidas frías durante la primavera y el verano. También damos comida a quienes la necesitan. Con tu donación de café nos ayudas a llegar a muchos más Ayúdanos a construir un mundo mejor con un simple gesto: donando tu café virtual.",
-                "hreadmore": "Ver más"
+                "hreadmore": "Ver más",
+                "bhome":"INICIO",
+                "babout":"SOBRE NOSOTROS",
+                "bwork":"NUESTRO TRABAJO",
+                "bdonate":"DONÁ",
+                "bcontact":"CONTACTANOS",
+                "atitle":"Sobre Nosotros",
+                "adescription":"Kfee es una cafetería que surgió para apoyar a las personas sin hogar. Les llevamos bebidas calientes durante el otoño y el invierno y bebidas frías durante la primavera y el verano. Además, transformamos la recaudación en alimentos. Cada café que donas se convierte en ayuda directa.Ayúdanos a construir un mundo mejor con un simple gesto: donando tu café virtual.",
+                "aphrase":"Nos ganamos la vida con lo que obtenemos, pero hacemos una vida con lo que damos.",
+                "wdonationstitle":"Donaciones",
+                "wdescription":"Nos permites hacer 1500 de bebida caliente y 600 de bebida fría + comida con las donaciones",
+                "wpartnershiptitle":"Asociaciones",
+                "wpartnership":"Nos hemos asociado con varias cafeterías de diferentes partes del mundo porque necesitamos distribuir estas bebidas con el dinero que donas.",
+                "wtransporttitle":"Alianzas de Transporte",
+                "wtransport":"Gracias a ustedes hicimos alianzas de transporte para poder llegar a todos los lugares donde se necesita.",
+                "dtitlecause":"Dona\n y se parte de esta causa",
+                "ddescriptioncause":"Con tu ayuda de la donación de 50 pesos argentinos hoy, con es menos de lo que cuesta un café normal y menos de un dolar, nos permite distribuir 1 litro de café, té, mate o chocolate; ya sea caliente o frío, por día. Ayudanos a seguir ayudando.",
+                "contactus":"Contactate con nosotros si tienes \nalguna pregunta",
+                "sendmymail":"Enviar Email"
               },
 			}
         
         var contactform =  document.getElementById('contactform');
-        contactform.setAttribute('action', 'https://formspree.io/' + 'xjvpvlgr'); 
+        contactform.setAttribute('action', 'https://formspree.io/f/' + 'xjvpvlgr'); 
         
         var menuBtn = document.getElementById("menuBtn");
         var sideNav = document.getElementById("sideNav");
